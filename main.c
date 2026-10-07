@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define NUM 2
+#define NUM 1
 
 void main() {
 	int num[NUM] = { 0 };
