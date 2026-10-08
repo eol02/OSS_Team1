@@ -4,6 +4,7 @@
 
 void Arithmetic_Operations(int, int);		//#1
 void PrimeNumber(int, int);		//#2
+void Multiplication(int, int);  // #3
 void GCD(int, int);		//#4
 
 void main() {
@@ -16,8 +17,10 @@ void main() {
 	
     Arithmetic_Operations(num[0], num[1]);
 	PrimeNumber(num[0], num[1]);
+	Multiplication(num[0], num[1]);
 	GCD(num[0], num[1]);
 }
+
 void Arithmetic_Operations(int a, int b) { //#1 두 수를 입력받아 사칙연산 수행
 
 	printf("\n%d + %d = %d, ", a, b, a + b);
@@ -51,6 +54,13 @@ void PrimeNumber(int n1, int n2) {	//#2 두 수 중 더 큰 수까지의 소수 
 			printf("%d ", i);
 		}
 	}
+}
+
+void Multiplication(int n1, int n2) {  // #3 일종의 구구단, n1단의 n2만큼 출력
+    printf("\n%d단의 %d까지: ", n1, n2);
+    for (int i = 1; i <= n2; i++) {
+        printf("%d * %d = %d, ", n1, i, n1 * i);
+    }
 }
 
 void GCD(int n1, int n2) {	//#4 두 수의 최대공약수 출력
