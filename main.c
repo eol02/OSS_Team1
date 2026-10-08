@@ -2,7 +2,7 @@
 
 #define NUM 2
 
-void PrimeNumber(int, int);	//#2
+void PrimeNumber(int, int);		//#2
 
 void main() {
 	int num[NUM] = { 0 };
