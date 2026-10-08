@@ -57,9 +57,9 @@ void PrimeNumber(int n1, int n2) {	//#2 두 수 중 더 큰 수까지의 소수 
 }
 
 void Multiplication(int n1, int n2) {  // #3 일종의 구구단, n1단의 n2만큼 출력
-    printf("\n%d단의 %d까지: ", n1, n2);
+    printf("\n%d단의 %d까지 곱셈: ", n1, n2);
     for (int i = 1; i <= n2; i++) {
-        printf("%d * %d = %d, ", n1, i, n1 * i);
+        printf("%d ", n1 * i);
     }
 }
 
