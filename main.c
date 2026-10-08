@@ -3,6 +3,7 @@
 #define NUM 2
 
 void PrimeNumber(int, int);		//#2
+void GCD(int, int);		//#4
 
 void main() {
 	int num[NUM] = { 0 };
@@ -13,6 +14,7 @@ void main() {
 	}
 
 	PrimeNumber(num[0], num[1]);
+	GCD(num[0], num[1]);
 }
 
 void PrimeNumber(int n1, int n2) {	//#2 두 수 중 더 큰 수까지의 소수 나열
@@ -33,5 +35,28 @@ void PrimeNumber(int n1, int n2) {	//#2 두 수 중 더 큰 수까지의 소수 
 		if (check == 1) {
 			printf("%d ", i);
 		}
+	}
+}
+
+void GCD(int n1, int n2) {	//#4 두 수의 최대공약수 출력
+
+	int tmp;
+
+	if (n1 == n2) {
+		printf("\nGCD: %d", n1);
+		return;
+	}
+
+	if (n2 == 0) {
+		printf("\nGCD: %d", n1);
+		return;
+	}
+
+	else {
+		tmp = n2;
+		n2 = n1 % n2;
+		n1 = tmp;
+
+		GCD(n1, n2);
 	}
 }
